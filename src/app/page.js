@@ -41,7 +41,7 @@ export default function Home() {
       validationSchema: loginSchema,
       onSubmit: async function (values, action) {
         if (
-          values.email === "consumer@gmail.com" ||
+          values.email === "consumer@gmail.com" &&
           values.password === "consumer123"
         ) {
           const payload = {
@@ -63,7 +63,7 @@ export default function Home() {
             toast.success("Welcome back!");
           }, 3000);
         } else if (
-          values.email === "practitioner@gmail.com" ||
+          values.email === "practitioner@gmail.com" &&
           values.password === "practitioner123"
         ) {
           const payload = {
