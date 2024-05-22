@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useAuthContext } from "@/context/authContext";
 
 const Page = () => {
-  const { profileDetail } = useAuthContext();
+  const { userRole } = useAuthContext();
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
@@ -19,7 +19,7 @@ const Page = () => {
             Mint Property NFT
           </button>
         </Link>
-        {profileDetail?.role === "Practitioner" && (
+        {userRole === "Practitioner" && (
           <Link href={"/dashboard/mint-practitioner-nft"}>
             <button className="bg-primary px-6 py-2 rounded-lg">
               Mint Practitioner NFT

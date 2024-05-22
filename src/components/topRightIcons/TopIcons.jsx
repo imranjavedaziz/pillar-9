@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 
 function TopIcons() {
-  const { isSideBarOpen, setIsSideBarOpen, headshot, profileDetail } =
+  const { isSideBarOpen, setIsSideBarOpen, headshot, profileDetail, userRole } =
     useAuthContext();
   const [isPopupVisible, setPopupVisible] = useState();
   const popupRef = useRef(null);
@@ -70,7 +70,7 @@ function TopIcons() {
             </span>
           </button>
           <h1 className="hidden md:block  text-heading-xs sm:text-heading-sm lg:text-[2rem] font-bold leading-[18px] sm:leading-[44px] text-black">
-            {profileDetail?.role === "Consumer"
+            {userRole === "Consumer"
               ? "Property Dashboard"
               : "Practitioner Dashboard"}{" "}
           </h1>
