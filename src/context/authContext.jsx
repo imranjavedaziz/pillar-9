@@ -144,6 +144,7 @@ const AuthProvider = ({ children }) => {
         setMinting,
         userData,
         setUserData,
+        setUserRole,
       }}
     >
       {children}
