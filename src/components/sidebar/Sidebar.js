@@ -183,6 +183,7 @@ function Sidebar() {
                 </Link>
               )}
             </div>
+            {console.log(userRole)}
             {userRole === "Practitioner" && (
               <div>
                 <div

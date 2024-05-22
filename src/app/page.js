@@ -59,7 +59,7 @@ export default function Home() {
             setloading(false);
             router.push("/dashboard");
             // handleLogin("df3jh5j3vtj45hk4j2hg4ec2jbr2rh248");
-            setRole("Consumer");
+            userRole("Consumer");
             toast.success("Welcome back!");
           }, 3000);
         } else if (
@@ -81,7 +81,7 @@ export default function Home() {
             setloading(false);
             router.push("/dashboard");
             // handleLogin("df3jh5j3vtj45hk4j2hg4ec2jbr2rh248");
-            setRole("Practitioner");
+            userRole("Practitioner");
             toast.success("Welcome back!");
           }, 3000);
         } else {
